@@ -1,0 +1,15 @@
+body {
+  background-color: rgb(4, 94, 94);
+}
+
+/* how to target with a class in CSS */
+/* classes with a dot .  */
+.p-tag {
+  color: rgb(217, 47, 255) !important;
+}
+.p-tag2 {
+  color: rgb(47, 255, 47);
+}
+#header-2 {
+  color: rgb(201, 226, 6);
+}
