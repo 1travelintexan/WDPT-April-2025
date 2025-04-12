@@ -1,0 +1,78 @@
+/* CSS for the mobile screen first at the top  */
+body {
+  background-color: rgb(21, 21, 125);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  background-color: yellow;
+  padding: 20px;
+  /* border property wants the thickness of the border, style of the border, and the color  */
+  border: 10px solid white;
+  margin: 0;
+}
+h3 {
+  background-color: rgb(17, 123, 123);
+  margin-top: 50px;
+}
+p {
+  font-size: 2rem;
+}
+.puppy-pic {
+  height: 30vh;
+  margin: 10px;
+}
+
+#images-container {
+  background-color: tomato;
+  /* display flex on the container (not the elements) */
+  display: flex;
+  /* to adjust horizontally we use justify content  */
+  justify-content: space-evenly;
+  /* to adjust vertically we use align items  */
+  align-items: center;
+  /* make the elements on top of each other with flex direction  ; */
+  flex-direction: column;
+  /* if there is not enough space horizontally, then we use the wrap method  */
+}
+
+/* media queries (fancy word for break point) */
+/* wider than 400px would be a table size  */
+@media screen and (min-width: 400px) {
+  body {
+    background-color: blueviolet;
+  }
+  h1 {
+    color: rgb(177, 3, 73);
+  }
+  /* you can uses classes with . and ids with #  */
+
+  #images-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* wider than 900px would be a PC  */
+@media screen and (min-width: 900px) {
+  body {
+    background-color: rgb(81, 158, 26);
+  }
+  .puppy-pic {
+    display: block;
+  }
+  #middle-pic {
+    margin-top: 100px;
+  }
+  #images-container {
+    height: 500px;
+    background-color: tomato;
+    /* display flex on the container (not the elements) */
+    display: flex;
+    /* to adjust horizontally we use justify content  */
+    justify-content: space-evenly;
+    /* to adjust vertically we use align items  */
+    align-items: center;
+  }
+}
