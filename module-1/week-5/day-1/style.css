@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(67, 66, 66);
+}
+.background-purple {
+  background-color: rgb(96, 26, 162);
+}
+.pet-card {
+  border: 1px solid white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgb(110, 108, 108);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pet-card img {
+  height: 100px;
+}
