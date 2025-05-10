@@ -1,0 +1,7 @@
+#card {
+  border: 2px solid white;
+  margin: 30px;
+}
+.hidden {
+  display: none;
+}
