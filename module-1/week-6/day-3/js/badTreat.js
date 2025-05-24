@@ -1,16 +1,16 @@
-class Treat {
+class BadTreat {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
     //syntax for random number between two numbers
     this.left = Math.floor(Math.random() * (450 - 0 + 1) + 0);
-    this.top = -50;
-    this.width = 30;
-    this.height = 30;
+    this.top = -100;
+    this.width = 60;
+    this.height = 60;
     this.imagesArray = [
-      "../assets/treat.png",
-      "../assets/peanutbutter.png",
-      "../assets/treat.png",
-      "../assets/peanutbutter.png",
+      "../assets/chocolate.png",
+      "../assets/grapes.png",
+      "../assets/chocolate.png",
+      "../assets/grapes.png",
     ];
     this.randomImageIndex = Math.floor(Math.random() * this.imagesArray.length);
     //create an img element

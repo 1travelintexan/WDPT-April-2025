@@ -10,19 +10,25 @@
     <!-- start screen div  -->
     <div id="start-screen">
       <h1>Ragnars Hungry</h1>
+      <h4>Eat all the good food and avoid the bad things</h4>
       <button id="start-game">Play</button>
     </div>
     <!-- game screen div  -->
     <div id="game-container">
       <section>
-        <h3>Lives: <span id="lives">3</span></h3>
+        <h3>Lives: <span id="lives"></span></h3>
         <h3>Score: <span id="score">0</span></h3>
       </section>
       <div id="game-screen"></div>
     </div>
     <!-- gameover screen div  -->
-    <div id="gameover-screen"><h1>Game over Screen</h1></div>
+    <div id="gameover-screen">
+      <h1>Game over Screen</h1>
+      <button id="restart-button">Restart</button>
+    </div>
     <!-- link the js files at the bottom of the <body> -->
+    <script src="./js/bullet.js"></script>
+    <script src="./js/badTreat.js"></script>
     <script src="./js/treat.js"></script>
     <script src="./js/player.js"></script>
     <script src="./js/game.js"></script>

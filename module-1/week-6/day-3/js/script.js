@@ -1,12 +1,14 @@
 //variables here
 const playGameButton = document.querySelector("#start-game");
-const startScreen = document.querySelector("#start-screen");
-const gameScreen = document.querySelector("#game-screen");
-const gameContainer = document.querySelector("#game-container");
+const restartGameButton = document.querySelector("#restart-button");
 let ourGame;
 //event listeners here
 playGameButton.addEventListener("click", () => {
   startGame();
+});
+restartGameButton.addEventListener("click", () => {
+  //easy way to reload
+  window.location.reload();
 });
 window.addEventListener("keydown", (event) => {
   if (event.code === "ArrowRight") {
@@ -14,6 +16,12 @@ window.addEventListener("keydown", (event) => {
   }
   if (event.code === "ArrowLeft") {
     ourGame.player.directionX = -3;
+  }
+  if (event.code === "Space") {
+    ourGame.bullets.push(
+      new Bullet(ourGame.gameScreen, ourGame.player.left, ourGame.player.top)
+    );
+    ourGame.boomSound.play();
   }
 });
 window.addEventListener("keyup", (event) => {

@@ -13,3 +13,6 @@ body {
 #gameover-screen {
   display: none;
 }
+.heart {
+  height: 50px;
+}
