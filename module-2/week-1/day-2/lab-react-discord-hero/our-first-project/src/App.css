@@ -1,0 +1,52 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  width: 60%;
+}
+body {
+  background-color: rgb(90, 28, 147);
+}
+h1 {
+  margin-top: 60px;
+  width: 60%;
+  line-height: 1.7rem;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav img {
+  height: 30px;
+}
+#btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+button {
+  margin: 10px;
+  padding: 10px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(199, 199, 200);
+  color: rgb(113, 95, 95);
+}
+#discord-btn {
+  background-color: rgb(29, 29, 29);
+  color: aliceblue;
+}
+.people-img {
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
