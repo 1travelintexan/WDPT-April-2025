@@ -1,4 +1,3 @@
-import About from "./About"
 import users from "../users.json"
 import { Link } from "react-router-dom"
 function Homepage() {
