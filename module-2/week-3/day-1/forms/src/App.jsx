@@ -7,6 +7,7 @@ import { useState } from "react";
 
 //using uuid for unique ids
 import { v4 as uuidv4 } from "uuid";
+import { UpdatePet } from "./pages/UpdatePet";
 
 function App() {
   const petsArray = [
@@ -17,8 +18,9 @@ function App() {
   const [petsState, setPetsState] = useState(petsArray);
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
-  const [isGood, setIsGood] = useState(true);
+  const [isGood, setIsGood] = useState(false);
   const [type, setType] = useState(null);
+  const [showForm, setShowForm] = useState(false);
   //functions
   function handleNameChange(event) {
     console.log("hello in the function", event.target.value);
@@ -53,39 +55,43 @@ function App() {
   return (
     <>
       <h1>Form Day</h1>
-      {/* here is where we add the form  */}
-      <form onSubmit={handleAddNewPet}>
-        <label>
-          Pet Name:
-          <input type="text" value={name} onChange={handleNameChange} />
-        </label>
-        <label>
-          Pet age:
-          <input
-            type="number"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
-          />
-        </label>
-        <label>
-          Is a good pet:
-          <input
-            type="checkbox"
-            checked={isGood}
-            onChange={(e) => setIsGood(e.target.checked)}
-          />
-        </label>
-        <label>
-          Pet Type:
-          <select onChange={(event) => setType(event.target.value)}>
-            <option value="">--none--</option>
-            <option value="Cat">Meow Meow</option>
-            <option value="Dog">Woof Woof</option>
-            <option value="Bird">Tweet Tweet</option>
-          </select>
-        </label>
-        <button>Add Pet</button>
-      </form>
+      <button onClick={() => setShowForm(!showForm)}>Show Form</button>
+
+      {/* ternay to show form  */}
+      {showForm ? (
+        <form onSubmit={handleAddNewPet}>
+          <label>
+            Pet Name:
+            <input type="text" value={name} onChange={handleNameChange} />
+          </label>
+          <label>
+            Pet age:
+            <input
+              type="number"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+            />
+          </label>
+          <label>
+            Is a good pet:
+            <input
+              type="checkbox"
+              checked={isGood}
+              onChange={(e) => setIsGood(e.target.checked)}
+            />
+          </label>
+          <label>
+            Pet Type:
+            <select onChange={(event) => setType(event.target.value)}>
+              <option value="">--none--</option>
+              <option value="Cat">Meow Meow</option>
+              <option value="Dog">Woof Woof</option>
+              <option value="Bird">Tweet Tweet</option>
+            </select>
+          </label>
+          <button>Add Pet</button>
+        </form>
+      ) : null}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route
@@ -97,6 +103,12 @@ function App() {
         <Route
           path="/one-pet/:petId"
           element={<PetDetails petsState={petsState} />}
+        />
+        <Route
+          path="/update-pet/:petId"
+          element={
+            <UpdatePet petsState={petsState} setPetsState={setPetsState} />
+          }
         />
       </Routes>
     </>

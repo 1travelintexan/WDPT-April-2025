@@ -1,6 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 export const PetList = ({ petsState, handleDelete }) => {
+  //use the search params
+  const [theQueries] = useSearchParams();
+  const theNameQuery = theQueries.get("name");
+  const theAgeQuery = theQueries.get("age");
+  console.log("the queries", theNameQuery, theAgeQuery);
+
   return (
     <div>
       <h2>PetList:</h2>
@@ -18,6 +24,9 @@ export const PetList = ({ petsState, handleDelete }) => {
             >
               Delete
             </button>
+            <Link to={`/update-pet/${onePet.id}`}>
+              <button>Update</button>
+            </Link>
           </div>
         );
       })}
