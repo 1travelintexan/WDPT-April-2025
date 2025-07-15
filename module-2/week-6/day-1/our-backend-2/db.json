@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Josh",
+      "dog": "Ragnar",
+      "hobbies": [
+        "Surf",
+        "Being bad at videogames"
+      ]
+    },
+    {
+      "id": 2,
+      "firstname": "Eric",
+      "cat": false,
+      "hobbies": [
+        "Lord of the Rings",
+        "DnD"
+      ]
+    },
+    {
+      "id": 3,
+      "firstname": "Lari",
+      "cat": true,
+      "hobbies": [
+        "Learning cool things"
+      ]
+    }
+  ],
+  "pets": [
+    {
+      "id": 1,
+      "name": "Ragnar",
+      "image": "https://images.unsplash.com/photo-1690052346621-e541ac1efe9e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 2,
+      "name": "Tomas",
+      "image": "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 3,
+      "name": "Luna",
+      "image": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmlyZHxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "name": "leo",
+      "image": "https://images.unsplash.com/photo-1577493340887-b7bfff550145?q=80&w=680&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": 4
+    }
+  ]
+}
