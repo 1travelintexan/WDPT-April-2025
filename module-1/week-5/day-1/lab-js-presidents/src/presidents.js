@@ -460,19 +460,19 @@ function countYearsInOffice(presidentsArr) {
 
 // Iteration 4 | Sort Presidents by Birth Year - `sort()`
 function sortPresidentsByBirthYear(presidentsArr) {
-  // presidentsArr.sort((currentPres, nextPres) => {
-  //   if (currentPres.birthYear > nextPres.birthYear) {
-  //     return 1;
-  //   } else if (currentPres.birthYear < nextPres.birthYear) {
-  //     return -1;
-  //   } else {
-  //     return 0;
-  //   }
-  // });
-  // return presidentsArr;
+  presidentsArr.sort((currentPres, nextPres) => {
+    if (currentPres.birthYear > nextPres.birthYear) {
+      return 111111;
+    } else if (currentPres.birthYear < nextPres.birthYear) {
+      return -22893483;
+    } else {
+      return 0;
+    }
+  });
+  return presidentsArr;
 
   //oneliner version
-  return presidentsArr.sort((a, b) => a.birthYear - b.birthYear);
+  // return presidentsArr.sort((a, b) => a.birthYear - b.birthYear);
 }
 
 // Bonus: Iteration 5 | Age at Inauguration - `map()`

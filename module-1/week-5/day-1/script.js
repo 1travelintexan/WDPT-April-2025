@@ -31,10 +31,13 @@ changeBackgroundBtnElement.addEventListener("click", () => {
   //to toggle a class we use the 'toggle' method
   bodyElement.classList.toggle("background-purple");
 });
+
 //add event listener to add random pet
 addRandomPetButtonElement.addEventListener("click", () => {
   const randomIndex = getRandomIndex();
   const randomPet = pets[randomIndex];
+
+  //copy the logic to add a new section
   const newSection = document.createElement("section");
   newSection.innerHTML = `
   <img src='${randomPet.image}' alt='pet image'/>
@@ -45,15 +48,14 @@ addRandomPetButtonElement.addEventListener("click", () => {
   newSection.classList.add("pet-card");
   petsDivContainerElement.appendChild(newSection);
 
-  const deleteBtn = newSection.querySelector(`.delete-btn`);
+  //inside the event listener, add another event listener to the delete button
+  const deleteBtn = newSection.querySelector(".delete-btn");
   deleteBtn.addEventListener("click", () => {
     console.log("clicked");
     newSection.remove();
   });
-
-  //this removes the pet from the array
-  pets.splice(randomIndex, 1);
 });
+
 function getRandomIndex() {
   return Math.floor(Math.random() * pets.length);
 }
@@ -93,7 +95,7 @@ const pets = [
 ];
 
 //loop of the pets
-pets.splice(0, 1).forEach((onePet) => {
+pets.forEach((onePet) => {
   //**********Basic create element example ********* */
   //   //create a element
   //   const newElement = document.createElement("h5");

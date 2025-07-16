@@ -123,7 +123,6 @@ class Game {
     }
   }
   gameOver() {
-    console.log("game over", this.endScreen);
     this.gameContainer.style.display = "none";
     this.endScreen.style.display = "block";
   }

@@ -13,3 +13,9 @@ body {
 #header-2 {
   color: rgb(201, 226, 6);
 }
+#container {
+  background-image: url("../ragnar.png");
+  background-size: cover;
+  object-fit: cover;
+  height: 300px;
+}
