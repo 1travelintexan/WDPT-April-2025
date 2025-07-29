@@ -45,6 +45,9 @@ const AllPetsPage = () => {
             <h3>{eachPet.name}</h3>
           </Link>
           <button onClick={() => handleDeletePet(eachPet.id)}>Delete</button>
+          <Link to={`/edit-pet/${eachPet.id}`}>
+            <button>Edit</button>
+          </Link>
         </div>
       ))}
     </div>

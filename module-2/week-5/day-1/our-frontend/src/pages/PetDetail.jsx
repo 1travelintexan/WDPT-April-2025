@@ -25,7 +25,7 @@ const PetDetail = () => {
   }, [petId]);
   return (
     <div>
-      <img alt="pet image" src={onePet.image} />
+      <img alt="pet image" src={onePet.image} className="detail-image" />
       <h1>{onePet.name}'s Page!!!</h1>
     </div>
   );

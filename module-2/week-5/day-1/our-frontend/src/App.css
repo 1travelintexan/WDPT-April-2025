@@ -6,8 +6,16 @@ h1 {
   padding: 0;
   margin: 0;
 }
-nav {
+.light-theme {
   background-color: rgb(22, 146, 146);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dark-theme {
+  background-color: rgb(12, 63, 63);
+  color: aliceblue;
   height: 10vh;
   display: flex;
   align-items: center;
@@ -18,16 +26,20 @@ nav {
   border-radius: 50%;
 }
 footer {
-  background-color: aquamarine;
+  background-color: rgb(91, 200, 164);
   height: 10vh;
 }
 
-#our-body {
+#our-body-dark {
   min-height: 80vh;
-  background-color: rgb(21, 10, 54);
+  background-color: rgb(18, 8, 47);
   text-align: center;
 }
-
+#our-body-light {
+  min-height: 80vh;
+  background-color: rgb(135, 110, 212);
+  text-align: center;
+}
 .navlink {
   color: rgba(234, 240, 235, 0.341);
   text-decoration: none;
@@ -52,4 +64,10 @@ form {
 }
 label {
   margin: 5px;
+}
+.detail-image {
+  height: 50vh;
+}
+button {
+  margin-left: 10px;
 }
