@@ -1,0 +1,22 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "name": "Ragnar",
+      "age": 4,
+      "owner": "Joshua"
+    },
+    {
+      "id": 2,
+      "name": "Tomas",
+      "age": 8,
+      "owner": "Dani"
+    },
+    {
+      "id": 3,
+      "name": "Rocky",
+      "age": 1,
+      "owner": "Tim"
+    }
+  ]
+}
