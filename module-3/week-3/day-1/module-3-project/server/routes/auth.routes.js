@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const UserModel = require("../models/User.model");
 const bcryptjs = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const { isAuthenticated } = require("../middlewares/jwt.middleware");
 //first a /signup route that will check for the user email if the email is free then create the user
 router.post("/signup", async (req, res) => {
   try {
@@ -47,13 +49,30 @@ router.post("/login", async (req, res) => {
       if (!doesPasswordMatch) {
         res.status(500).json({ errorMessage: "invalid credentials" });
       } else {
-        res.status(200).json({ message: "You are logged in! Nice work" });
+        // ****************JWT token*************
+        //first thing is to create the payload
+        const payload = { _id: foundUser._id };
+        //.sign method takes three arguments
+        const authToken = jwt.sign(payload, process.env.TOKEN_SECRET, {
+          algorithm: "HS256",
+          expiresIn: "6h",
+        });
+
+        res
+          .status(200)
+          .json({ message: "You are logged in! Nice work", authToken });
       }
     }
   } catch (error) {
     console.log(error);
     res.status(500).json("problem signup user");
   }
+});
+
+//verify route
+router.get("/verify", isAuthenticated, async (req, res) => {
+  console.log("here in the verify route", req.headers);
+  res.status(200).json({ message: "Token good", payload: req.headers.payload });
 });
 
 module.exports = router;
