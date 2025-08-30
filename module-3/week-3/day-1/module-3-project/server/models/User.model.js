@@ -21,6 +21,10 @@ const userSchema = new Schema(
     profileImage: {
       type: String,
     },
+    pets: {
+      type: [Schema.Types.ObjectId],
+      ref: "Pets",
+    },
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
