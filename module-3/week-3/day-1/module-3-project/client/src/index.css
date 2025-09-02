@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.borders {
+  @apply border-1 rounded-md;
+}
+
+.nice-hover-btn {
+  @apply border-1 rounded-xl p-2 hover:scale-105 transition-all ease-in-out hover:bg-slate-200;
+}
